@@ -21,6 +21,10 @@ public class SchoolService {
         return repository.findAll();
     }
 
+    public School findSchoolById(Integer id) {
+        return repository.findById(id).orElse(null); // Assuming you have a method in your repository to find by ID
+    }
+
     public FullSchoolResponse findSchoolsWithStudents(Integer schoolId) {
         var school = repository.findById(schoolId)
                 .orElse(
