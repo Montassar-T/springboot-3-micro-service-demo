@@ -12,15 +12,15 @@ spring:
   application:
     name: students
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/students
-    username: username
-    password: password
+
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/students
+    username: root
+    password: 20202526
   jpa:
     hibernate:
       ddl-auto: create
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.MySQLDialect
 
 management:
   tracing:
